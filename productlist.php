@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+<form action="hendle.php" method="post">
     <table align="right" border="1">
         <tr><td>ยินดีต้อนรับ</td></tr>
-        <tr><td>คุณ <?echo "{$_SESSION['user']}"?></td></tr>
+        <tr><td>คุณ <?php 
+            session_start();
+            echo "{$_SESSION['name']}"
+        ?></td></tr>
     </table>
     <center>
         <h1>ยินดีต้อนรับเข้าสู่เมนูลูกค้า</h1>
@@ -34,5 +38,6 @@
             ?>
         </table>
     </center>
+</form>
 </body>
 </html>

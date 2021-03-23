@@ -14,8 +14,8 @@
         }
 
         public function verify_user($user, $pass){
-            $sql = "SELECT count('member_id') as n, 'user', 'type' FROM 'member'
-            WHERE 'user'='{$user}' and 'password'='{$pass}'";
+            $sql = "SELECT count(member_id) as n, name, user, type FROM member
+            WHERE user='{$user}' and password='{$pass}'";
             $rs=$this->dbConn->query($sql);
             $row=$rs->fetch_assoc();
             return $row;
@@ -31,7 +31,7 @@
                         echo "<td>{$value}</td>";
                     }
                 }
-                echo "<td><a href='PO.php'>< ShopShock ></a></td>";
+                echo "<td><a href='handle.php?sltpro={$row['Product_id']}'>< ShopShock ></a></td>";
                 echo "</tr>";
             }
         }

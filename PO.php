@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="handle.php" method="post">
         <center>
             <h1>SHOPSHOCK</h1>
             <h2>select Product to Cart</h2>
