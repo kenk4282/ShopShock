@@ -9,13 +9,13 @@
 
         public function insertdata($data){
             $sql = "INSERT INTO `member`(`name`, `user`, `password`)
-            VALUES ('{$data['name']}','{$data['nickname']}',MD5('{$data['name']}'))";
+            VALUES ('{$data['name']}','{$data['nickname']}','{$data['name']}')";
             $rs = $this->dbConn->query($sql);
         }
 
         public function verify_user($user, $pass){
             $sql = "SELECT count('member_id') as n, 'user', 'type' FROM 'member'
-            WHERE 'user'='{$user}' and 'password'=MD5('{$pass}') ";
+            WHERE 'user'='{$user}' and 'password'='{$pass}'";
             $rs=$this->dbConn->query($sql);
             $row=$rs->fetch_assoc();
             return $row;

@@ -13,6 +13,7 @@
         }
         else{
             echo "<script>alert('PASSWORD NOT MATCH')</script>";
+            echo "<a href='Register.php'>back to register...</a>";
         }
     }
     else if(isset($_POST['loguser'])){
@@ -32,6 +33,7 @@
         }
         else{
             echo "<script>alert('รหัสผ่านไม่ถูกต้อง')</script>";
+            echo "<a href='login.php'>back to register...</a>";
         }
     }
 ?>

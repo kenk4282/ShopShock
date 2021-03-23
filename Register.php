@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ShopShock Member Register</h1>
     <center>
+    <h1>ShopShock Member Register</h1>
     _________________________________________<br><br>
     <form action="handle.php" method="post">
     <table>
