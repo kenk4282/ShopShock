@@ -27,7 +27,7 @@
         }
         else{
             echo "<script>alert('รหัสผ่านไม่ถูกต้อง')</script>";
-            echo "<a href='login.php'>back to register...</a>";
+            echo "<a href='login.php'>back to login...</a>";
         }
     }else if(isset($_POST['proid'])){
         

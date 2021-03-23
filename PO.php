@@ -32,7 +32,13 @@
                     <td>Cost:</td><td><input type="text" name="" id="cost" readonly></td>
                 </tr>
                 <tr>
-                    <td>Quantity:</td><td><select name="" id=""></select></td>
+                    <td>Quantity:</td><td>
+                    <?php 
+                        include_once "db.php";
+                        $myconn = new database();
+                        $myconn->connect();
+                    ?>
+                    </td>
                 </tr>
             </table><br>
             _________________________________________<br>

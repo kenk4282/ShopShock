@@ -31,7 +31,7 @@
                         echo "<td>{$value}</td>";
                     }
                 }
-                echo "<td><a href='handle.php?sltpro={$row['Product_id']}'>< ShopShock ></a></td>";
+                echo "<td><a href='PO.php?sltpro={$row['Product_id']}'>< ShopShock ></a></td>";
                 echo "</tr>";
             }
         }
