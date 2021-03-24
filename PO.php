@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buy Product</title>
 </head>
 <body>
     <form action="handle.php" method="post">
@@ -19,10 +19,10 @@
             _________________________________________<br><br>
             <table>
                 <tr>
-                    <td>Product_ID:</td><td><input type="text" name="proid" id="" value="<?= $_REQUEST['Product_id']?>" readonly></td>
+                    <td>Product_ID:</td><td><input type="text" name="proid" id="" value="<?= $_REQUEST['sltpro']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Product_Code:</td><td><input type="text" name="procode" id="" readonly></td>
+                    <td>Product_Code:</td><td><input type="text" name="procode" id="" value="<?= $_REQUEST['sltpro']?>" readonly></td>
                 </tr>
                 <tr>
                     <td>Product_Name:</td><td><input type="text" name="proname" id="" readonly></td>

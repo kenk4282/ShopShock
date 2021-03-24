@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
 </head>
 <body>
     <center>
     <h1>ShopShock Member Register</h1>
-    _________________________________________<br><br>
     <form action="handle.php" method="post">
     <table>
+        <th>
+            <td colspan="2" align="right"><a href="login.php">login</a></td>
+        </th>
+        <tr>
+            <td colspan="2">_________________________________________</td>
+        </tr>
+        <tr><td><br></td></tr>
         <tr>
             <td>Name :</td><td><input type="text" name="insert_name" id="" required></td>
         </tr>
