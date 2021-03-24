@@ -8,8 +8,8 @@
         }
 
         public function insertdata($data){
-            $sql = "INSERT INTO `member`(`name`, `user`, `password`)
-            VALUES ('{$data['name']}','{$data['nickname']}','{$data['name']}')";
+            
+            $sql = "INSERT INTO `member`SELECT MAX(member_id)+1,'{$data['name']}','{$data['nickname']}','{$data['pass']}','01' FROM member";
             $rs = $this->dbConn->query($sql);
         }
 
@@ -22,14 +22,12 @@
         }
 
         public function showproduct(){
-            $sql = "SELECT * FROM product";
+            $sql = "SELECT Product_id, Product_code, Product_Name , Brand_name, Unit_name,Cost FROM product, brand, unit WHERE product.Brand_ID = brand.Brand_id AND product.Unit_ID = unit.Unit_id";
             $rs=$this->dbConn->query($sql);
             while ($row=$rs->fetch_assoc()){
                 echo "<tr>";
                 foreach($row as $key => $value){
-                    if($key != "Cat_ID" && $key != "Stock_Quantity" && $key != "Order_Point"){
-                        echo "<td>{$value}</td>";
-                    }
+                    echo "<td>{$value}</td>";
                 }
                 echo "<td><a href='PO.php?sltpro={$row['Product_id']}'>< ShopShock ></a></td>";
                 echo "</tr>";
