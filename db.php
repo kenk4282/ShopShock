@@ -29,7 +29,7 @@
                 foreach($row as $key => $value){
                     echo "<td>{$value}</td>";
                 }
-                echo "<td><a href='PO.php?sltpro={$value['Product_id']}'>< ShopShock ></a></td>";
+                echo "<td><a href='PO.php?sltpro={$row['Product_id']}'>< ShopShock ></a></td>";
                 echo "</tr>";
             }
         }
