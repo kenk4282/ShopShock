@@ -9,7 +9,7 @@
             $data['nickname'] = $_POST['insert_nickname'];
             $data['pass'] = $_POST['insert_pass'];
             $myconn->insertdata($data);
-            header("location: login.php");
+            header("location: Register.php");
         }
         else{
             echo "<script>alert('PASSWORD NOT MATCH')</script>";
