@@ -33,5 +33,11 @@
                 echo "</tr>";
             }
         }
+
+        public function showdetailproduct($id){
+            $sql = "SELECT * FROM product, brand, unit WHERE product.Brand_ID = brand.Brand_id AND product.Unit_ID = unit.Unit_id";
+            $rs = $this->dbConn->query($sql);
+            return $rs->fetch_assoc();
+        }
     }
 ?>

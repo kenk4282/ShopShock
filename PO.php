@@ -12,6 +12,7 @@
             include_once "db.php";
             $myconn = new database();
             $myconn->connect();
+            $rs = $myconn->showdetailproduct($_GET['sltpro']);
         ?>
         <center>
             <h1>SHOPSHOCK</h1>
@@ -19,26 +20,25 @@
             _________________________________________<br><br>
             <table>
                 <tr>
-                    <td>Product_ID:</td><td><input type="text" name="proid" id="" value="<?= $_REQUEST['sltpro']?>" readonly></td>
+                    <td>Product_ID:</td><td><input type="text" name="buyproid" id="" value="<?= $rs['Product_id']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Product_Code:</td><td><input type="text" name="procode" id="" value="<?= $_REQUEST['sltpro']?>" readonly></td>
+                    <td>Product_Code:</td><td><input type="text" name="procode" id="" value="<?= $rs['Product_code']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Product_Name:</td><td><input type="text" name="proname" id="" readonly></td>
+                    <td>Product_Name:</td><td><input type="text" name="proname" id="" value="<?= $rs['Product_Name']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Brand:</td><td><input type="text" name="" id="brand" readonly></td>
+                    <td>Brand:</td><td><input type="text" name="" id="brand" value="<?= $rs['Brand_name']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Unit:</td><td><input type="text" name="" id="unit" readonly></td>
+                    <td>Unit:</td><td><input type="text" name="" id="unit" value="<?= $rs['Unit_name']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Cost:</td><td><input type="text" name="" id="cost" readonly></td>
+                    <td>Cost:</td><td><input type="text" name="" id="cost" value="<?= $rs['Cost']?>" readonly></td>
                 </tr>
                 <tr>
-                    <td>Quantity:</td><td>
-                    </td>
+                    <td>Quantity:</td><td><input type="number" name="quantity" id="" value="<?= $rs['Stock_Quantity']?>"></td>
                 </tr>
             </table><br>
             _________________________________________<br>
