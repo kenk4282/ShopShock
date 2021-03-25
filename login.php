@@ -18,7 +18,7 @@
         <tr>
             <td>password:</td><td><input type="password" name="logpass" id="" require></td>
         </tr>
-        <tr><td></td><td></td></tr>
+        <tr><td><br></td></tr>
     <tr><td colspan="2" align="center">
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
