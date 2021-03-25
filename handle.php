@@ -2,6 +2,7 @@
     require_once "db.php";
     $myconn = new database();
     $myconn->connect();
+    $count = 0;
 
     if(isset($_POST['insert_name'])){
         if($_POST['insert_pass'] == $_POST['insert_compass']){
