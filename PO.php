@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <form action="handle.php" method="post">
-    <table align="right">
-        <tr><td>ยินดีต้อนรับ</td></tr>
-        <tr><td>คุณ <?php 
-            session_start();
-            if($_SESSION['name'] == ""){
-                header("location: login.php");
-            }
-            else{
-                echo "{$_SESSION['name']}";
-            } 
-        ?></td></tr>
-    </table>
-    <center>
-        <h1>ยินดีต้อนรับเข้าสู่เมนูลูกค้า</h1>
-        <br>|<a href="Productlist.php">สั่งซื้อสินค้า</a>|<a href="PO.php">ชำระเงิน</a>|<a href="logout.php">ออกจากระบบ</a>|<br>
-        <h2>SHOPSHOCK</h2>
-    </center>
+        <table align="right">
+            <tr>
+                <td>ยินดีต้อนรับ</td>
+            </tr>
+            <tr>
+                <td>คุณ <?php
+                        session_start();
+                        if ($_SESSION['name'] == "") {
+                            header("location: login.php");
+                        } else {
+                            echo "{$_SESSION['name']}";
+                        }
+                        ?></td>
+            </tr>
+        </table>
+        <center>
+            <h1>ยินดีต้อนรับเข้าสู่เมนูลูกค้า</h1>
+            <br>|<a href="Productlist.php">สั่งซื้อสินค้า</a>|<a href="PO.php">ชำระเงิน</a>|<a href="logout.php">ออกจากระบบ</a>|<br>
+            <h2>SHOPSHOCK</h2>
+        </center>
     </form>
 </body>
+
 </html>
