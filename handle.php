@@ -23,7 +23,7 @@
             $_SESSION['name']=$rs['name'];
             $_SESSION['user']=$rs['user'];
             $_SESSION['type']=$rs['type'];
-            header("location: productlist.php");
+            header("location: Productlist.php");
         }
         else{
             echo "<script>alert('รหัสผ่านไม่ถูกต้อง')</script>";
@@ -33,9 +33,9 @@
         $rs = $myconn->showdetailproduct($_POST['buyproid']);
         if($_POST['quantity'] > $rs['Stock_Quantity']){
             echo "<script>alert('จำนวนที่ต้องการซื้อมีมากกว่าที่มีอยู่<br>ไม่สามารถทำรายการต่อได้')</script>";
-            echo "<a href='productlist.php'>back to Product List...</a>";
+            echo "<a href='Productlist.php'>back to Product List...</a>";
         }else{
-            header("location: ");
+            header("location: PO.php");
         }
     }
 ?>
