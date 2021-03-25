@@ -16,7 +16,7 @@
         <center>
             <h1>SHOPSHOCK</h1>
             <h2>select Product to Cart</h2>
-            <hr><br><br>
+            _________________________________________<br><br>
             <table>
                 <tr>
                     <td>Product_ID:</td><td><input type="text" name="proid" id="" value="<?= $_REQUEST['sltpro']?>" readonly></td>
@@ -41,7 +41,7 @@
                     </td>
                 </tr>
             </table><br>
-            <hr><br>
+            _________________________________________<br>
             <button type="submit">Submit</button><button type="reset">Reset</button>
         </center>
     </form>
