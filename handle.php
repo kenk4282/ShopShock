@@ -35,7 +35,6 @@
             echo "<script>alert('จำนวนที่ต้องการซื้อมีมากกว่าที่มีอยู่\nไม่สามารถทำรายการต่อได้')</script>";
             echo "<a href='Productlist.php'>back to Product List...</a>";
         }else{
-
             header("location: PO.php");
         }
     }
