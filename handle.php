@@ -17,6 +17,7 @@
             echo "<a href='Register.php'>back to register...</a>";
         }
     }
+
     else if(isset($_POST['loguser'])){
         $rs = $myconn->verify_user($_POST['loguser'], $_POST['logpass']);
         session_start();
@@ -30,7 +31,9 @@
             echo "<script>alert('รหัสผ่านไม่ถูกต้อง')</script>";
             echo "<a href='login.php'>back to login...</a>";
         }
-    }else if(isset($_POST['buyproid'])){
+    }
+    
+    else if(isset($_POST['buyproid'])){
         $check = $myconn->showdetailproduct($_POST['buyproid']);
         session_start();
         if($_SESSION['name'] == ""){
