@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Product</title>
 </head>
-<body>
+<body style="margin: 0 auto; width:450px">
     <form action="handle.php" method="post">
         <?php 
             include_once "db.php";
@@ -21,7 +21,8 @@
         <center>
             <h1>SHOPSHOCK</h1>
             <h2>select Product to Cart</h2>
-            _________________________________________<br><br>
+            <div style="border: red 1px solid;padding:20px">
+            <hr><br>
             <table>
                 <tr>
                     <td>Product_ID:</td><td><input type="text" name="buyproid" id="" value="<?= $rs['Product_id']?>" readonly></td>
@@ -45,8 +46,9 @@
                     <td>Quantity:</td><td><input type="number" name="quantity" id="" value="<?= $rs['Stock_Quantity']?>"></td>
                 </tr>
             </table><br>
-            _________________________________________<br>
+            <hr><br>
             <button type="submit">Submit</button><button type="reset">Reset</button>
+            </div>
         </center>
     </form>
 </body>

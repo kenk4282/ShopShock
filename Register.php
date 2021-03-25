@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
 </head>
-<body style="margin: 0 auto; width:50%">
+<body style="margin: 0 auto; width:450px">
     <center>
+    <br><br>
     <h1>ShopShock Member Register</h1>
     <form action="handle.php" method="post">
     <div style="border: red 1px solid;padding:20px">
