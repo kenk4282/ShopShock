@@ -18,9 +18,13 @@
         <tr>
             <td>password:</td><td><input type="password" name="logpass" id="" require></td>
         </tr>
-    </table><br>
-    <button type="submit">Submit</button><button type="reset">Reset</button><a href="Register.php"><button>Register</button></a>
+        <tr><td></td><td></td></tr>
+    <tr><td colspan="2" align="center">
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <a href="Register.php"><input type="button" value="Register"></a></td></tr>
     </form>
+    </table>
     </center>
 </body>
 </html>
