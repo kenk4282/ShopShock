@@ -10,6 +10,12 @@
 
 <body>
     <form action="handle.php" method="post">
+        <?php
+        session_start();
+        if ($_SESSION['name'] == "") {
+            header("location: login.php");
+        }
+        ?>
         <table align="right">
             <tr>
                 <td>ยินดีต้อนรับ</td>
