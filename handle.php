@@ -30,11 +30,12 @@
             echo "<a href='login.php'>back to login...</a>";
         }
     }else if(isset($_POST['buyproid'])){
-        $rs = $myconn->showdetailproduct($_POST['buyproid']);
-        if($_POST['quantity'] > $rs['Stock_Quantity']){
-            echo "<script>alert('จำนวนที่ต้องการซื้อมีมากกว่าที่มีอยู่<br>ไม่สามารถทำรายการต่อได้')</script>";
+        $check = $myconn->showdetailproduct($_POST['buyproid']);
+        if($_POST['quantity'] > $check['Stock_Quantity']){
+            echo "<script>alert('จำนวนที่ต้องการซื้อมีมากกว่าที่มีอยู่\nไม่สามารถทำรายการต่อได้')</script>";
             echo "<a href='Productlist.php'>back to Product List...</a>";
         }else{
+
             header("location: PO.php");
         }
     }

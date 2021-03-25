@@ -17,9 +17,7 @@
     </table>
     <center>
         <h1>ยินดีต้อนรับเข้าสู่เมนูลูกค้า</h1>
-    </center>
-    <center>
-        <br>|<a href="Add_Product.php">สั่งซื้อสินค้า</a>|<a href="PO.php">ชำระเงิน</a>|<a href="logout.php">ออกจากระบบ</a>|<br>
+        <br>|<a href="Productlist.php">สั่งซื้อสินค้า</a>|<a href="PO.php">ชำระเงิน</a>|<a href="logout.php">ออกจากระบบ</a>|<br>
         <h2>SHOPSHOCK</h2>
         <h3>Select Product to Cart</h3>
         <table border="1">

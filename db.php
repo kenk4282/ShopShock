@@ -35,9 +35,18 @@
         }
 
         public function showdetailproduct($id){
-            $sql = "SELECT * FROM product, brand, unit WHERE product.Brand_ID = brand.Brand_id AND product.Unit_ID = unit.Unit_id";
+            $sql = "SELECT * FROM product, brand, unit WHERE product.Brand_ID = brand.Brand_id AND product.Unit_ID = unit.Unit_id AND product.Product_id = $id";
             $rs = $this->dbConn->query($sql);
             return $rs->fetch_assoc();
+        }
+
+        public function updatebill(){
+            $sql = "INSERT INTO `bill`SELECT MAX(Bill_id)+1, MAX(Cus_ID)+1,MAX(Bill_Status)+1 FROM member";
+            $rs = $this->dbConn->query($sql);
+        }
+
+        public function showbill(){
+            $sql = "SELECT * FROM bill";
         }
     }
 ?>
