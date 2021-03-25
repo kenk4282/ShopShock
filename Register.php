@@ -15,7 +15,7 @@
             <td colspan="2" align="right"><a href="login.php">login</a></td>
         </th>
         <tr>
-            <td colspan="2">_________________________________________</td>
+            <td colspan="2"><hr></td>
         </tr>
         <tr><td><br></td></tr>
         <tr>
@@ -33,7 +33,7 @@
     </table><br>
     <button type="submit">Submit</button><button type="reset">Reset</button>
     </form>
-    _________________________________________
+    <hr>
     </center>
     
 </body>
