@@ -12,6 +12,10 @@
             include_once "db.php";
             $myconn = new database();
             $myconn->connect();
+            session_start();
+            if($_SESSION['name'] == ""){
+                header("location: login.php");
+            }
             $rs = $myconn->showdetailproduct($_GET['sltpro']);
         ?>
         <center>

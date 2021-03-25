@@ -31,7 +31,11 @@
         }
     }else if(isset($_POST['buyproid'])){
         $check = $myconn->showdetailproduct($_POST['buyproid']);
-        if($_POST['quantity'] > $check['Stock_Quantity']){
+        session_start();
+        if($_SESSION['name'] == ""){
+            header("location: login.php");
+        }
+        else if($_POST['quantity'] > $check['Stock_Quantity']){
             echo "<script>alert('จำนวนที่ต้องการซื้อมีมากกว่าที่มีอยู่\nไม่สามารถทำรายการต่อได้')</script>";
             echo "<a href='Productlist.php'>back to Product List...</a>";
         }else{

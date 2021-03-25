@@ -12,7 +12,12 @@
         <tr><td>ยินดีต้อนรับ</td></tr>
         <tr><td>คุณ <?php 
             session_start();
-            echo "{$_SESSION['name']}"
+            if($_SESSION['name'] == ""){
+                header("location: login.php");
+            }
+            else{
+                echo "{$_SESSION['name']}";
+            } 
         ?></td></tr>
     </table>
     <center>
